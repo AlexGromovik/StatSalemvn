@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class StatSaleServiceTest {
 
     @Test
-    public void shouldFindSumSales() {
+    public void findSumSales() {
         StatSaleService service = new StatSaleService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 180;
@@ -15,7 +15,7 @@ public class StatSaleServiceTest {
     }
 
     @Test
-    public void shouldFindAvarageSale() {
+    public void findAverageSale() {
         StatSaleService service = new StatSaleService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedAverage = 15;
@@ -24,39 +24,39 @@ public class StatSaleServiceTest {
     }
 
     @Test
-    public void shouldFindMaxSalesMonth(){
+    public void findMaxSalesMonth(){
         StatSaleService service = new StatSaleService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedMaxMonth = 8;
-        long actualMaxMonth = service.FindMaxMonth(sales);
+        long actualMaxMonth = service.findMaxMonth(sales);
         Assertions.assertEquals(expectedMaxMonth, actualMaxMonth);
     }
 
     @Test
-    public void shouldFindMinSalesMonth() {
+    public void findMinMonth() {
         StatSaleService service = new StatSaleService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedMinMonth = 9;
-        long actualMinMonth = service.FindMinMonth(sales);
+        long actualMinMonth = service.findMinMonth(sales);
         Assertions.assertEquals(expectedMinMonth, actualMinMonth);
     }
 
     @Test
-    public void shouldFindSalesBelowAvarege() {
+    public void findBelowAverage() {
         StatSaleService service = new StatSaleService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedBelowAverage = 5;
-        long actualBelowSalesMonth = service.FindBelowAvarage(sales);
-        Assertions.assertEquals(expectedBelowAverage, actualBelowSalesMonth);
+        long actualBelowAverageMonth = service.belowAverage(sales);
+        Assertions.assertEquals(expectedBelowAverage, actualBelowAverageMonth);
     }
 
     @Test
-    public void shouldFindSalesAboveAverage(){
+    public void findAboveAverage(){
         StatSaleService service = new StatSaleService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedAboveAverage = 5;
-        long actualAboveSalesMonth = service.FindAboveAvarage(sales);
-        Assertions.assertEquals(expectedAboveAverage, actualAboveSalesMonth);
+        long actualAboveAverageMonth = service.aboveAverage(sales);
+        Assertions.assertEquals(expectedAboveAverage, actualAboveAverageMonth);
     }
 }
 

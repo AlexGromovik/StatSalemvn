@@ -13,7 +13,7 @@ public class StatSaleService {
         return calcSumSale(sales) / sales.length;
     }
 
-    public long FindMaxMonth(long[] sales) {
+    public long findMaxMonth(long[] sales) {
         long maxMonth = sales[0];
         long month = 0;
         for (long sale : sales) {
@@ -25,7 +25,7 @@ public class StatSaleService {
         return maxMonth + 1;
     }
 
-    public long FindMinMonth(long[] sales) {
+    public long findMinMonth(long[] sales) {
         int minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minMonth]) {
@@ -35,7 +35,7 @@ public class StatSaleService {
         return minMonth + 1;
     }
 
-    public long FindBelowAvarage(long[] sales) {
+    public long belowAverage(long[] sales) {
         long below = 0;
         long i = averageSale(sales);
         for (long sale : sales) {
@@ -46,7 +46,7 @@ public class StatSaleService {
         return below;
     }
 
-    public long FindAboveAvarage(long[] sales) {
+    public long aboveAverage(long[] sales) {
         long above = 0;
         long i = averageSale(sales);
         for (long sale : sales) {
