@@ -1,23 +1,23 @@
 package ru.netology.javaqa.StatSalemvn.services;
 
 public class StatSaleService {
-    public int calcSumSale(int[] sales) {
-        int sumSale = 0;
-        for (int sale : sales) {
+    public long calcSumSale(long[] sales) {
+        long sumSale = 0;
+        for (long sale : sales) {
             sumSale += sale;
         }
         return sumSale;
     }
 
-    public int averageSale(int[] sales) {
+    public long averageSale(long[] sales) {
         return calcSumSale(sales) / sales.length;
     }
 
-    public int FindMaxMonth(int[] sales) {
-        int maxMonth = sales[0];
-        int month = 0;
-        for (int sale : sales) {
-            if (sale >= sales[maxMonth]) {
+    public long FindMaxMonth(long[] sales) {
+        long maxMonth = sales[0];
+        long month = 0;
+        for (long sale : sales) {
+            if (sale >= sales[(int) maxMonth]) {
                 maxMonth = month;
             }
             month = month + 1;
@@ -25,7 +25,7 @@ public class StatSaleService {
         return maxMonth + 1;
     }
 
-    public int FindMinMonth(int[] sales) {
+    public long FindMinMonth(long[] sales) {
         int minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minMonth]) {
@@ -35,20 +35,22 @@ public class StatSaleService {
         return minMonth + 1;
     }
 
-    public int FindBelowAvarage(int[] sales) {
-        int below = 0;
-        for (int sale : sales) {
-            if (sale < averageSale(sales)) {
+    public long FindBelowAvarage(long[] sales) {
+        long below = 0;
+        long i = averageSale(sales);
+        for (long sale : sales) {
+            if (sale < i) {
                 below++;
             }
         }
         return below;
     }
 
-    public int FindAboveAvarage(int[] sales) {
-        int above = 0;
-        for (int sale : sales) {
-            if (sale > averageSale(sales)) {
+    public long FindAboveAvarage(long[] sales) {
+        long above = 0;
+        long i = averageSale(sales);
+        for (long sale : sales) {
+            if (sale > i) {
                 above++;
             }
         }

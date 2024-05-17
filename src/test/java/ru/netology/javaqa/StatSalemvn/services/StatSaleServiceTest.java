@@ -8,54 +8,54 @@ public class StatSaleServiceTest {
     @Test
     public void shouldFindSumSales() {
         StatSaleService service = new StatSaleService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedSum = 180;
-        int actualSum = service.calcSumSale(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedSum = 180;
+        long actualSum = service.calcSumSale(sales);
         Assertions.assertEquals(expectedSum, actualSum);
     }
 
     @Test
     public void shouldFindAvarageSale() {
         StatSaleService service = new StatSaleService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedAverage = 15;
-        int actualAverage = service.averageSale(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedAverage = 15;
+        long actualAverage = service.averageSale(sales);
         Assertions.assertEquals(expectedAverage, actualAverage);
     }
 
     @Test
     public void shouldFindMaxSalesMonth(){
         StatSaleService service = new StatSaleService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMaxMonth = 8;
-        int actualMaxMonth = service.FindMaxMonth(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedMaxMonth = 8;
+        long actualMaxMonth = service.FindMaxMonth(sales);
         Assertions.assertEquals(expectedMaxMonth, actualMaxMonth);
     }
 
     @Test
     public void shouldFindMinSalesMonth() {
         StatSaleService service = new StatSaleService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMinMonth = 9;
-        int actualMinMonth = service.FindMinMonth(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedMinMonth = 9;
+        long actualMinMonth = service.FindMinMonth(sales);
         Assertions.assertEquals(expectedMinMonth, actualMinMonth);
     }
 
     @Test
     public void shouldFindSalesBelowAvarege() {
         StatSaleService service = new StatSaleService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedBelowAverage = 5;
-        int actualBelowSalesMonth = service.FindBelowAvarage(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedBelowAverage = 5;
+        long actualBelowSalesMonth = service.FindBelowAvarage(sales);
         Assertions.assertEquals(expectedBelowAverage, actualBelowSalesMonth);
     }
 
     @Test
     public void shouldFindSalesAboveAverage(){
         StatSaleService service = new StatSaleService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedAboveAverage = 5;
-        int actualAboveSalesMonth = service.FindAboveAvarage(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedAboveAverage = 5;
+        long actualAboveSalesMonth = service.FindAboveAvarage(sales);
         Assertions.assertEquals(expectedAboveAverage, actualAboveSalesMonth);
     }
 }
