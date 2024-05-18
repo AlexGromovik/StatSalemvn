@@ -37,9 +37,9 @@ public class StatSaleService {
 
     public int belowAverage(long[] sales) {
         int monthSalesBelow = 0;
-        long i = averageSale(sales);
+        long averageSale = averageSale(sales);
         for (long sale : sales) {
-            if (sale < i) {
+            if (sale < averageSale) {
                 monthSalesBelow++;
             }
         }
